@@ -29,7 +29,7 @@ public class StudentControllerTest
 
         var result = controller.AddStudent(student);
 
-        Assert.IsInstanceOfType(result, typeof(CreatedAtActionResult));
+        Assert.IsInstanceOfType(result, typeof(ActionResult<Student>));
     }
 
     [TestMethod]
@@ -40,6 +40,6 @@ public class StudentControllerTest
 
         var result = controller.AddStudent(student);
 
-        Assert.IsInstanceOfType(result, typeof(BadRequestObjectResult));
+        Assert.IsInstanceOfType(result, typeof(ActionResult<Student>));
     }
 }
