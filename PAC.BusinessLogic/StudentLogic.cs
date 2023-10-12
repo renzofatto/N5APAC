@@ -20,14 +20,15 @@ public class StudentLogic : IStudentLogic
         return _studentsRepository.GetStudentById(id);
     }
 
-    public IEnumerable<Student> GetStudents()
-    {
-        return _studentsRepository.GetStudents();
-    }
-
     public void InsertStudents(Student? student)
     {
         _studentsRepository.InsertStudents(student);
     }
+
+    public IEnumerable<Student> GetStudents(int? minAge, int? maxAge)
+    {
+        return _studentsRepository.GetStudents(minAge, maxAge);
+    }
+
 }
 
